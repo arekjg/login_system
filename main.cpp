@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-// Basen on tutorial from: https://www.youtube.com/watch?v=I_aWPGCaaFA
+// Based on tutorial from: https://www.youtube.com/watch?v=I_aWPGCaaFA
 
 bool IsLoggedIn()
 {
