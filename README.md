@@ -1,1 +1,1 @@
-Simple login and registration console app written on C++
+Simple login and registration console app written in C++
