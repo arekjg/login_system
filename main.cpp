@@ -4,6 +4,8 @@
 using namespace std;
 
 // Based on tutorial from: https://www.youtube.com/watch?v=I_aWPGCaaFA
+// My changes:
+//      added else statement in main() to handle wrong user input
 
 bool IsLoggedIn()
 {
