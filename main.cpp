@@ -7,6 +7,7 @@ using namespace std;
 
 bool IsLoggedIn()
 {
+    // login function
     string username, password;
     string un, pw;      // username, password
 
@@ -19,6 +20,7 @@ bool IsLoggedIn()
     getline(read, un);
     getline(read, pw);
 
+    // if username and password are correct return true, otherwise return false
     if (un == username && pw == password)
     {
         return true;
@@ -31,7 +33,8 @@ bool IsLoggedIn()
 
 int main()
 {
-    int choice;
+    int choice;     // user's choice
+    menu:           // where to jump
 
     cout << "1: Register\n2: Login\nYour choice: ";
     cin >> choice;
@@ -40,17 +43,17 @@ int main()
     {
         string username, password;
 
-        cout << "select a username: ";
+        cout << "Enter username: ";
         cin >> username;
-        cout << "select a password: ";
+        cout << "Enter password: ";
         cin >> password;
 
         ofstream file;
         file.open(username + ".txt");
-        file << username << endl << password;
+        file << username << "\n" << password;
         file.close();
 
-        main();
+        goto menu;
     }
     else if (choice == 2)
     {
@@ -58,15 +61,20 @@ int main()
 
         if (!status)
         {
-            cout << "False Login!" << endl;
+            cout << "Incorrect login and/or password!\n";
             system("PAUSE");
             return 0;
         }
         else
         {
-            cout << "Succesfully logged in!" << endl;
+            cout << "Succesfully logged in!\n";
             system("PAUSE");
             return 1;
         }
+    }
+    else
+    {
+        cout << "\nPlease enter valid number (1 or 2)\n";
+        goto menu;
     }
 }
